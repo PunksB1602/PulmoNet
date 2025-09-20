@@ -1,0 +1,57 @@
+PulmoNet/
+│
+├── data/                           # datasets (excluded from git, huge files)
+│   └── CheXpert-v1.0-small/        
+│       ├── train.csv
+│       ├── valid.csv
+│       ├── train/
+│       └── valid/
+│
+├── notebooks/                      # Jupyter notebooks (EDA + experiments)
+│   ├── 01_explore_dataset.ipynb
+│   ├── 02_baseline_cnn.ipynb
+│   ├── 03_ssl_pretraining.ipynb
+│   ├── 04_gradcam_explainability.ipynb
+│
+├── src/                            # main Python package
+│   ├── __init__.py
+│   ├── dataset.py                  # PyTorch Dataset & DataLoader
+│   ├── models.py                   # model architectures
+│   ├── train.py                    # training & validation loops
+│   ├── evaluate.py                 # evaluation + explainability
+│   ├── utils.py                    # metrics, visualization, helpers
+│   └── config.py                   # config parser (YAML + CLI)
+│
+├── configs/                        # experiment configs (YAML)
+│   ├── baseline.yaml
+│   ├── ssl.yaml
+│   └── gradcam.yaml
+│
+├── outputs/                        # generated artifacts (ignored in git)
+│   ├── checkpoints/                # model weights
+│   ├── logs/                       # training logs (tensorboard, wandb, etc.)
+│   ├── figures/                    # plots, GradCAM heatmaps
+│   └── reports/                    # evaluation summaries, CSVs
+│
+├── experiments/                    # experiment tracking
+│   ├── exp_baseline.json
+│   └── exp_ssl.json
+│
+├── tests/                          # unit tests (pytest)
+│   ├── test_dataset.py
+│   ├── test_models.py
+│   └── test_utils.py
+│
+├── scripts/                        # bash scripts for reproducibility
+│   ├── download_data.sh
+│   ├── run_baseline.sh
+│   └── run_ssl.sh
+│
+├── .gitignore                      # ignore data/, outputs/, venv/, checkpoints
+├── requirements.txt                # minimal dependencies
+├── environment.yml                 # full Conda environment
+├── run_train.py                    # entrypoint: python run_train.py --config configs/baseline.yaml
+├── run_eval.py                     # entrypoint for evaluation
+├── setup.py                        # pip install -e .
+├── LICENSE                         # open-source license
+└── README.md                       # project documentation
