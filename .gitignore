@@ -2,28 +2,28 @@ __pycache__/
 *.py[cod]
 *.pyo
 *.pyd
-*.env
-*.venv
-env/
-venv/
 *.egg-info/
 *.egg
 
-.ipynb_checkpoints
+.env
+.venv/
+env/
+venv/
+
+.ipynb_checkpoints/
 
 .vscode/
 .idea/
-
-data/
-
-*.pth
-*.pt
 
 .DS_Store
 Thumbs.db
 *.swp
 *~
 
-outputs/**/best_model.pth
-outputs/**/best_model.pt
+data/
 
+*.pth
+*.pt
+
+outputs/
+artifacts/
